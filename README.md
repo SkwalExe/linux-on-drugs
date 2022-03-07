@@ -1,6 +1,13 @@
 # Linux on drugs🧪
 ![](images/1.gif)
 # Installation 📦
+## Arch Linux
+Linux on drugs is in the AUR
+```bash
+yay -S linux-on-drugs
+```
+## Other distributions
+
 **Clone this repo**
 ```bash
 git clone https://github.com/SkwalExe/linux-on-drugs.git
