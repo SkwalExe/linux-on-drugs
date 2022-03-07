@@ -16,11 +16,15 @@ Move the binary
 sudo cp target/release/linux-on-drugs /usr/bin/linux-on-drugs
 ```
 # Usage 📝
+![](images/2.png)
+## Example 
 ```bash
-linux-on-drugs
-```
+linux-on-drugs --block-size 20
+``` 
+![](images/3.gif)
 # How it works 🔬
 Very simple, the program select a color number from 1 to 255 and print a space with this background color.
+
 # Uninstall 🗑
 Just remove the binary
 
