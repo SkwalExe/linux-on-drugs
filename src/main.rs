@@ -42,7 +42,7 @@ fn drug_print(text: &str) {
 }
 
 fn main() {
-   let block_content = String::from(" "); // I will add the possibility to change this later
+   let mut block_content = String::from(" ");
 
    let mut block_size: usize = 2;
    let mut command = "drugs";
@@ -52,6 +52,28 @@ fn main() {
 
    while args.len() > 0 {
       match args[0].as_str() {
+         "-c" | "--content" => {
+            if args.len() < 2 {
+               println!(
+                  "{}[ x ] : Error: Argument needed after -c/--content{}",
+                  RED, RESET
+               );
+               process::exit(1);
+            }
+
+            args.remove(0);
+            let temp = args.remove(0);
+
+            if temp.len() < 2 {
+               block_content = temp;
+            } else {
+               println!(
+                  "{}[ x ] : Error: you must specify only one character after -c/--content{}",
+                  RED, RESET
+               );
+               process::exit(1);
+            }
+         }
          "-b" | "--block-size" => {
             if args.len() < 2 {
                println!(
@@ -101,7 +123,6 @@ fn main() {
          }
       }
    }
-
    match command {
       "version" => println!(
          "{}Linux on drugs, by Skwal => {}{}{}",
@@ -129,6 +150,10 @@ fn main() {
          );
          println!(
             "\t{}--block-size, -b: {}Sets the size of each color block{}",
+            MAGENTA, YELLOW, RESET
+         );
+         println!(
+            "\t{}--content, -c: {}Sets the content of each color block{}",
             MAGENTA, YELLOW, RESET
          );
          println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
