@@ -15,6 +15,7 @@ const RESET: &str = "\x1b[0m";
 const BG_RED: &str = "\x1b[41m";
 const BG_MAGENTA: &str = "\x1b[45m";
 
+// this function is used to print a text with random color for each char
 fn drug_print(text: &str) {
    // random color for each letter
    let mut color_text = String::new();
@@ -36,18 +37,20 @@ fn drug_print(text: &str) {
 }
 
 fn main() {
-   let mut block_content = String::from(" ");
+   let mut block_content = String::from(" "); // the character inside each block
 
-   let mut block_size: usize = 2;
-   let mut command = "drugs";
+   let mut block_size: usize = 2; // the length of each block, the block_content will be repeated this number of times
+   let mut command = "drugs"; // command to execute (drugs, help, version)
 
-   let mut args: Vec<String> = std::env::args().collect();
-   args.remove(0);
+   let mut args: Vec<String> = std::env::args().collect(); // command line arguments
+   args.remove(0); // remove the name of the program
 
    while args.len() > 0 {
       match args[0].as_str() {
          "-c" | "--content" => {
             if args.len() < 2 {
+               // if no argument is provided after the flag
+               // print an error message and exit
                println!(
                   "{}[ x ] : Error: Argument needed after -c/--content{}",
                   RED, RESET
@@ -59,8 +62,11 @@ fn main() {
             let temp = args.remove(0);
 
             if temp.len() < 2 {
+               // if the argument is 1 char
                block_content = temp;
             } else {
+               // if the argument is more than 1 char
+               // print an error message and exit
                println!(
                   "{}[ x ] : Error: you must specify only one character after -c/--content{}",
                   RED, RESET
@@ -90,6 +96,7 @@ fn main() {
             };
 
             if block_size < 1 || block_size > 2000 {
+               // block size must be between 1 and 2000
                println!(
                   "{}[ x ] : Error: Argument after -b/--block-size must be between 1 and 2000{}",
                   RED, RESET
@@ -154,8 +161,10 @@ fn main() {
       }
 
       "drugs" => {
+         // block is equal to block_content repeated block_size times
          let block = block_content.repeat(block_size);
          loop {
+            // print the block with a random color in the background
             print!(
                "\x1b[48;5;{}m{}\x1b[0m",
                rand::thread_rng().gen_range(0..255),
