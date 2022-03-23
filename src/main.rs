@@ -48,7 +48,7 @@ fn main() {
    while args.len() > 0 {
       match args[0].as_str() {
          "-c" | "--content" => {
-            if args.len() < 2 {
+            if args.len() > 1 {
                // if no argument is provided after the flag
                // print an error message and exit
                println!(
@@ -61,7 +61,7 @@ fn main() {
             args.remove(0);
             let temp = args.remove(0);
 
-            if temp.len() < 2 {
+            if temp.len() == 1 {
                // if the argument is 1 char
                block_content = temp;
             } else {
@@ -75,7 +75,7 @@ fn main() {
             }
          }
          "-b" | "--block-size" => {
-            if args.len() < 2 {
+            if args.len() > 1 {
                println!(
                   "{}[ x ] : Error: Argument needed after -b/--block-size{}",
                   RED, RESET
