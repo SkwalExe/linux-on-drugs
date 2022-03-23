@@ -1,8 +1,6 @@
 // Author : SkwalExe
 // Github : https://github.com/SkwalExe
 
-#![allow(dead_code)]
-
 use rand::Rng;
 use std::process;
 
@@ -15,11 +13,7 @@ const CYAN: &str = "\x1b[96m";
 const WHITE: &str = "\x1b[97m";
 const RESET: &str = "\x1b[0m";
 const BG_RED: &str = "\x1b[41m";
-const BG_GREEN: &str = "\x1b[42m";
-const BG_YELLOW: &str = "\x1b[43m";
-const BG_BLUE: &str = "\x1b[44m";
 const BG_MAGENTA: &str = "\x1b[45m";
-const BG_CYAN: &str = "\x1b[46m";
 
 fn drug_print(text: &str) {
    // random color for each letter
