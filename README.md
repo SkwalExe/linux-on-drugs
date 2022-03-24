@@ -18,6 +18,17 @@ yay -S linux-on-drugs
 
 ## Other distributions
 
+### With make
+
+Run make
+
+```bash
+# 📂 linux-on-drugs/
+make
+```
+
+### Or
+
 **Clone this repo**
 
 ```bash
@@ -55,6 +66,17 @@ linux-on-drugs --block-size 20
 Very simple, the program select a color number from 1 to 255 and print a space with this background color.
 
 # Uninstall 🗑
+
+## With make
+
+Run make uninstall
+
+```bash
+# 📂 linux-on-drugs/
+make uninstall
+```
+
+## Or
 
 Just remove the binary
 
