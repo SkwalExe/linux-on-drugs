@@ -84,6 +84,21 @@ Just remove the binary
 sudo rm /usr/bin/linux-on-drugs
 ```
 
+# Docker 🐳
+
+### Build 🛠️
+
+```bash
+# 📂 linux-on-drugs/
+docker build -t linux-on-drugs .
+```
+
+### Run 🏃
+
+```bash
+docker run --rm -it linux-on-drugs [OPTIONS]
+```
+
 # final
 
 If you have any problem, don't hesitate to open an issue
