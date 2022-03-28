@@ -8,7 +8,7 @@ Output random colors really fast
 
 # Installation 📦
 
-## Arch Linux
+## Arch Linux 🐧
 
 Linux on drugs is in the AUR
 
@@ -16,9 +16,9 @@ Linux on drugs is in the AUR
 yay -S linux-on-drugs
 ```
 
-## Other distributions
+## Other 🪟🐧
 
-### With make
+### With make - Linux 🐧
 
 Run make
 
@@ -27,7 +27,7 @@ Run make
 make
 ```
 
-### Or
+### Build from source - Linux 🐧 & Windows 🪟
 
 **Clone this repo**
 
@@ -42,12 +42,14 @@ build with [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.
 cargo build --release
 ```
 
-Move the binary
+**[ LINUX ONLY ] :** Move the binary
 
 ```bash
 # 📂 linux-on-drugs/
 sudo cp target/release/linux-on-drugs /usr/bin/linux-on-drugs
 ```
+
+**On windows** the executable will be `target\release\linux-on-drugs.exe` you can move it wherever you want.
 
 # Usage 📝
 
