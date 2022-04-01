@@ -88,6 +88,14 @@ sudo rm /usr/bin/linux-on-drugs
 
 # Docker 🐳
 
+## Run the latest version
+
+```bash
+docker run --rm -it ghcr.io/skwalexe/linux-on-drugs:main
+```
+
+## Test your changes 🚧
+
 ### Build 🛠️
 
 ```bash
