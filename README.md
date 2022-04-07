@@ -20,11 +20,18 @@ yay -S linux-on-drugs
 
 ### With make - Linux 🐧
 
-Run make
+Build with make
 
 ```bash
 # 📂 linux-on-drugs/
 make
+```
+
+Move the binary
+
+```bash
+# 📂 linux-on-drugs/
+make install
 ```
 
 ### Build from source - Linux 🐧 & Windows 🪟
