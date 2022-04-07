@@ -109,6 +109,10 @@ docker build -t linux-on-drugs .
 docker run --rm -it linux-on-drugs [OPTIONS]
 ```
 
+# Change log 📝
+
+For version updates and bug fixes, please see our [CHANGELOG](CHANGELOG.md)
+
 # final
 
 If you have any problem, don't hesitate to open an issue
