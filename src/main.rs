@@ -140,6 +140,9 @@ fn main() {
          println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
          drug_print("Gives drugs to your computer.");
          println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
+         println!("{}The readme contains a lot of informations {}", MAGENTA, RESET);
+         println!("{}https://github.com/SkwalExe/{}{}", MAGENTA, env!("CARGO_PKG_NAME"),  RESET);
+         println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
          println!("Options : ");
          println!(
             "\t{}--version, -v: {}Prints the version of the program{}",
