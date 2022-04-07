@@ -62,13 +62,29 @@ sudo cp target/release/linux-on-drugs /usr/bin/linux-on-drugs
 
 ![](images/2.png)
 
-## Example 
+## --block-size
+
+The `--block-size` option is used to set the size of each color block.
+
+The number corresponds to the number of space/custom characters you want to use per color block.
 
 ```bash
 linux-on-drugs --block-size 20
 ``` 
 
 ![](images/3.gif)
+
+## --content
+
+The `--content` option is used to set the content of each color block.
+
+It is a space by default but you can use any custom characters.
+
+```bash
+linux-on-drugs --content "*"
+```
+
+![](images/4.gif)
 
 # How it works 🔬
 
@@ -85,9 +101,7 @@ Run make uninstall
 make uninstall
 ```
 
-## Or
-
-Just remove the binary
+## removing the binary
 
 ```bash
 sudo rm /usr/bin/linux-on-drugs
