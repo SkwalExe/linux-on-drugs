@@ -48,7 +48,7 @@ fn main() {
    while args.len() > 0 {
       match args[0].as_str() {
          "-c" | "--content" => {
-            if ! args.len() > 1 {
+            if args.len() < 2 {
                // if no argument is provided after the flag
                // print an error message and exit
                println!(
@@ -75,7 +75,7 @@ fn main() {
             }
          }
          "-b" | "--block-size" => {
-            if ! args.len() > 1 {
+            if args.len() < 2 {
                println!(
                   "{}[ x ] : Error: Argument needed after -b/--block-size{}",
                   RED, RESET
@@ -140,8 +140,16 @@ fn main() {
          println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
          drug_print("Gives drugs to your computer.");
          println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
-         println!("{}The readme contains a lot of informations {}", MAGENTA, RESET);
-         println!("{}https://github.com/SkwalExe/{}{}", MAGENTA, env!("CARGO_PKG_NAME"),  RESET);
+         println!(
+            "{}The readme contains a lot of informations {}",
+            MAGENTA, RESET
+         );
+         println!(
+            "{}https://github.com/SkwalExe/{}{}",
+            MAGENTA,
+            env!("CARGO_PKG_NAME"),
+            RESET
+         );
          println!("{}━━━━━━━━━━━━━━━━━{}", MAGENTA, RESET);
          println!("Options : ");
          println!(
