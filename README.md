@@ -140,6 +140,34 @@ If you have any problem, don't hesitate to open an issue
 
 # contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+1. Start by [**forking** this repository](https://github.com/SkwalExe/linux-on-drugs/fork)
+
+2. Then clone your fork to your local machine.
+  ```git
+  git clone https://github.com/your-username/linux-on-drugs.git
+  ```
+
+3. Create a new branch
+  ```git
+  git checkout -b super-cool-feature
+  ```
+
+4. Then make your changes
+
+5. Update the changelog and version number if needed inside `Cargo.toml` (using [Semantic Versioning](https://semver.org)) and execute `cargo run` to update the version number inside `Cargo.lock`
+
+6. Once you're done, commit your changes and push them to the remote repository.
+  ```git
+  git add --all
+  git commit -m "Add super-cool-feature"
+  git push origin super-cool-feature
+  ```
+
+7. Then, open a pull request on GitHub from your fork.
+    1. Go to [this link](https://github.com/SkwalExe/linux-on-drugs/compare/)
+    2. Click compare across forks
+    3. On the right, on `head repository` select your fork
+    4. And on `compare` select the branch you just created
+    5. Click on `Create Pull Request` and submit your pull request
 
 <a href="https://github.com/SkwalExe#ukraine"><img src="https://raw.githubusercontent.com/SkwalExe/SkwalExe/main/ukraine.jpg" width="100%" height="15px" /></a>
